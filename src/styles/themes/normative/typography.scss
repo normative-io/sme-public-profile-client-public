@@ -1,0 +1,49 @@
+// Copyright 2022 Meta Mind AB
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+@import '../default/breakpoints';
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+$brand-font-family: 'Zichtbaar';
+$brand-font-stack: $brand-font-family, 'Space Grotesk', 'Open Sans', sans-serif;
+
+@font-face {
+  font-family: $brand-font-family;
+  font-weight: 400;
+  src: url('~@normative/theme/src/assets/fonts/Zichtbaar-Regular.woff2');
+}
+
+@font-face {
+  font-family: $brand-font-family;
+  font-weight: 600;
+  src: url('~@normative/theme/src/assets/fonts/Zichtbaar-Demibold.woff2');
+}
+
+@font-face {
+  font-family: $brand-font-family;
+  font-weight: 500;
+  src: url('~@normative/theme/src/assets/fonts/Zichtbaar-Medium.woff2');
+}
+
+@mixin brand-font($font-weight, $font-size, $line-height, $font-size-tablet: false) {
+  font: $font-weight #{$font-size} / #{$line-height} $brand-font-stack;
+
+  @if ($font-size-tablet) {
+    @include tablet() {
+      font-size: $font-size-tablet;
+    }
+  }
+}

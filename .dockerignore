@@ -1,0 +1,14 @@
+Dockerfile
+node_modules
+.pnp.*
+.yarn
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.nest
+.git
+*.log
+
+# Don't pull in local dev environment variables!
+/public/env/

@@ -1,0 +1,87 @@
+// Copyright 2022 Meta Mind AB
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+@import '../../../styles/themes/default/breakpoints.scss';
+@import '../../../styles/themes/normative/typography.scss';
+
+.scope-definition {
+  &:not(:first-child) {
+    margin-top: 20px;
+
+    @include tablet() {
+      margin-top: 36px;
+    }
+  }
+
+  &:last-child {
+    p {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__heading {
+    @include brand-font(600, 20px, 1.3em);
+
+    margin: 0 0 12px;
+  }
+
+  &__title {
+    @include brand-font(600, 16px, 1.5em);
+
+    margin: 0;
+    padding-bottom: 4px;
+  }
+
+  &__text {
+    @include brand-font(400, 14px, 1.29em);
+
+    color: #666666;
+    overflow: hidden;
+    height: auto;
+    margin: 0;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__ghg-protocol {
+    @include brand-font(400, 14px, 1.29em);
+
+    margin-top: 16px;
+
+    @include tablet {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    a {
+      color: #000;
+
+      &:hover {
+        span {
+          text-decoration: none;
+        }
+      }
+    }
+
+    span {
+      display: inline-block;
+      line-height: 25px;
+      vertical-align: top;
+      padding-right: 6px;
+      text-decoration: underline;
+    }
+  }
+}

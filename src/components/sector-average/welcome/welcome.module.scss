@@ -1,0 +1,44 @@
+// Copyright 2022 Meta Mind AB
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+@import '../../../styles/themes/default/breakpoints.scss';
+@import '../../../styles/themes/normative/typography.scss';
+@import '../../../styles/themes/normative/variables.scss';
+
+.welcome {
+  max-width: 700px;
+  width: 100%;
+
+  &__title {
+    @include brand-font(500, 48px, 1.04em, 54px);
+
+    color: $primary-color;
+    margin: 0 0 16px;
+    max-width: 600px;
+  }
+
+  &__description {
+    @include brand-font(400, 20px, 1.2em);
+
+    margin: 0 0 32px;
+
+    @include tablet() {
+      margin: 0 48px 48px 0;
+    }
+  }
+}
+
+.corel {
+  color: #e76e50;
+}

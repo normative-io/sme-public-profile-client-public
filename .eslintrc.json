@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "env": {
+    "shared-node-browser": true
+  },
+  "overrides": [
+    {
+      "files": ["next.config.js"],
+      "parser": "espree",
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    }
+  ],
+  "rules": {
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

@@ -1,0 +1,51 @@
+// Copyright 2022 Meta Mind AB
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+$primary-color: rgb(1, 46, 1);
+$secondary-color: rgba(255, 208, 0, 0.966);
+
+$text-color: $primary-color;
+$contrast-text-color: rgb(253, 243, 243);
+$contrast-bg-color: rgb(253, 243, 243);
+
+$body-bg-color: rgb(253, 243, 243);
+
+$button-dark-bg-idle: #212121;
+$button-dark-bg-hover: lighten($button-dark-bg-idle, 15%);
+$button-dark-bg-active: lighten($button-dark-bg-idle, 30%);
+
+$button-light-bg-idle: #fefefe;
+$button-light-bg-hover: darken($button-light-bg-idle, 15%);
+$button-light-bg-active: darken($button-light-bg-idle, 30%);
+
+$chart-palette-hover: lighten($secondary-color, 20%);
+$chart-palette: (
+  100: lighten($primary-color, 0%),
+  90: lighten($primary-color, 10%),
+  80: lighten($primary-color, 20%),
+  70: lighten($primary-color, 30%),
+  60: lighten($primary-color, 40%),
+  50: lighten($primary-color, 50%),
+  40: lighten($primary-color, 60%),
+  30: lighten($primary-color, 70%),
+  20: lighten($primary-color, 80%),
+  10: lighten($primary-color, 90%),
+);
+
+$header-height: 50px;
+$footer-height: 50px;
+
+:export {
+  chartPaletteHover: $chart-palette-hover;
+}

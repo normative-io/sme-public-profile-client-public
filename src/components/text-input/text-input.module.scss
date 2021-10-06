@@ -1,0 +1,83 @@
+// Copyright 2022 Meta Mind AB
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+@import '../../styles/themes/normative/typography.scss';
+
+.text-input {
+  margin: 20px 0;
+  position: relative;
+
+  &__label,
+  &__input {
+    @include brand-font(400, 18px, 1em);
+
+    height: 60px;
+  }
+
+  &__label {
+    align-items: center;
+    color: #9fa1a7; // Grey 500
+    display: flex;
+    left: 16px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: top left;
+  }
+
+  &__input {
+    appearance: none;
+    color: #1c1c1c;
+    border-radius: 0;
+    border: 1px solid #9fa1a7; // Grey 500
+    padding: 15px 15px 0 15px;
+    width: 100%;
+  }
+
+  &__submit {
+    width: 100%;
+  }
+
+  &--error {
+    color: #b71c1c; // Red 900
+
+    .text-input__input {
+      border-color: #f44336; // Red 500
+      color: inherit;
+    }
+
+    .text-input__label {
+      color: inherit;
+    }
+  }
+
+  &--focus {
+    .text-input__input {
+      outline: none;
+      border: 1px solid #000;
+      color: #000;
+    }
+
+    .text-input__label {
+      color: #000;
+    }
+  }
+
+  &--error,
+  &--filled,
+  &--focus {
+    .text-input__label {
+      transform: scale(calc(2 / 3));
+    }
+  }
+}

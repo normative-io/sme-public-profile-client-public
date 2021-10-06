@@ -1,0 +1,58 @@
+// Copyright 2022 Meta Mind AB
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+$primary-color: rgb(0, 0, 0);
+$secondary-color: #ff9178;
+$white: #fff;
+$black: #000;
+
+$text-color: $primary-color;
+$contrast-text-color: #fff;
+
+$contrast-bg-color: #fff;
+$body-bg-color: $white;
+
+$button-dark-bg-idle: $primary-color;
+$button-dark-bg-hover: lighten($white, 90%);
+$button-dark-bg-active: lighten($white, 80%);
+
+$button-light-bg-idle: $white;
+$button-light-bg-hover: lighten($black, 90%);
+$button-light-bg-active: lighten($black, 80%);
+
+$selector-border-color: lighten($black, 80%);
+
+$chart-palette-hover: lighten($secondary-color, 20%);
+$chart-palette: (
+  100: #000,
+  90: #333,
+  80: #4d4d4d,
+  70: #666,
+  60: #808080,
+  50: #999,
+  40: #b3b3b3,
+  30: #ccc,
+);
+
+$max-width: 1224px;
+$min-width: 768px;
+
+$header-height: 80px;
+
+$big-screen: $max-width;
+$medium-screen: 1023px;
+
+:export {
+  chartPaletteHover: $chart-palette-hover;
+}
